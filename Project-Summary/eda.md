@@ -546,3 +546,16 @@ The plots below shows the correlation of each variable against each of the varia
 
 ![png](images/correlation.png)
 
+#### Scatter Plots
+The Scatter plots below shows the correlation of each variable against each of the variables in the training set
+
+![png](images/scatter_06_10.png)
+![png](images/scatter_10_15.png)
+![png](images/scatter_15_20.png)
+![png](images/scatter_20_25.png)
+![png](images/scatter_25_30.png)
+![png](images/scatter_30_35.png)
+![png](images/scatter_35_40.png)
+![png](images/scatter_40_45.png)
+![png](images/scatter_45.png)
+
