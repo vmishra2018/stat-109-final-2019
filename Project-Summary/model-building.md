@@ -9,7 +9,8 @@
 ### [Welcome](readme.md)&emsp;|&emsp;[Data Set](data-set.md)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[**_Model Building_**](model-building.md)&emsp;|&emsp;[Summary](#summary)
 
 <HR>
-##Model Building
+  
+## Model Building
 
 
 
