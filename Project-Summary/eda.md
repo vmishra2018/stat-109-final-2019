@@ -546,6 +546,16 @@ If you look at the scales the number of females patients are almost double the n
 #### Correlation Plots
 The plots below shows the correlation of each variable against each of the variables in the training set
 
+```python
+corr = medicare_data_train.corr()
+mask = np.zeros_like(corr, dtype=np.bool)
+mask[np.triu_indices_from(mask)] = True
+
+f, ax = plt.subplots(figsize=(20, 20))
+cmap = sns.diverging_palette(220, 10, as_cmap=True)
+sns.heatmap(corr, mask=mask, cmap=cmap);
+```
+
 ![png](images/correlation.png)
 
 
