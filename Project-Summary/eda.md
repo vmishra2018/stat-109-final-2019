@@ -620,6 +620,10 @@ filtered_corr.head()
 The Scatter plots below shows the correlation of each variable against each of the variables in the training set
 
 Plot 1:
+```python
+sns.pairplot(medicare_data_train.iloc[:, 6: 10]);
+```
+
 We observe the following correlation:
 <ul>
  <li>total_episodes and distinct_benefeciaries</li>
@@ -630,9 +634,17 @@ We observe the following correlation:
 
 Plot 2: No correlation exits between the variables 
 
+```python
+sns.pairplot(medicare_data_train.iloc[:, 10: 15]);
+```
+
 ![png](images/scatter_10_15.png)
 
 Plot 3:
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 15: 20]);
+```
 
 We observe the following correlation:
 <ul>
@@ -646,6 +658,10 @@ We observe the following correlation:
 ![png](images/scatter_15_20.png)
 
 Plot 4:
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 20: 25]);
+```
 
 We observe the following correlation:
 <ul>
@@ -663,21 +679,46 @@ We observe the following correlation:
 
 Plot 5: No correlation exits between the variables 
 
+```python
+sns.pairplot(medicare_data_train.iloc[:, 25: 30]);
+```
+
 ![png](images/scatter_25_30.png)
 
 Plot 6: No correlation exits between the variables 
+
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 30: 35]);
+```
 
 ![png](images/scatter_30_35.png)
 
 Plot 7: Some correlation exits betwen COPD and ASTHMA
 
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 35: 40]);
+```
+
 ![png](images/scatter_35_40.png)
 
 Plot 8: No correlation exits between the variables 
 
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 40: 45]);
+```
+
+
 ![png](images/scatter_40_45.png)
 
 Plot 9: No correlation exits between the variables 
+
+
+```python
+sns.pairplot(medicare_data_train.iloc[:, 45: ]);
+```
 
 ![png](images/scatter_45.png)
 
