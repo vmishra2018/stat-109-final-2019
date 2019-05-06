@@ -15,14 +15,16 @@
 - [EDA](#eda) 
   * [Sample Data](#sample-data) <BR>
   * [Rename Columns](#rename-columns) <BR>
+  * [Train Test Split](#train-test-split) <BR>
   * [Missing Data](#missing-data) <BR>
-    [Impute Missing Values](#impute-the-missing-values)<BR>
+  * [Impute Missing Values](#impute-the-missing-values)<BR>
   * [Number of Agencies By State](#number-of-agencies-by-state) <BR>
   * [Top 15 Cities with most Agencies](#top-15-cities-with-most-agencies) <BR>
   * [Number of Episodes By State](#number-of-episodes-by-state) <BR>
   * [Number of Episodes By City](#number-of-episodes-by-city) <BR>
   * [Expected Amount Vs Total Episodes](#expected-amount-vs-total-episodes) <BR>
   * [Number of Males and Females by State](#number-of-males-and-females-by-state) <BR>
+  * [Medicare Payments by State](#medicare-payments-by-state) <BR>
 - [Key Features](#key-features)
 
 <HR>
@@ -535,3 +537,5 @@ We would expect the relationship to be linear since you would want to see more p
 
 If you look at the scales the number of females patients are almost double the number of males in every state. It will be interesting to group them actual episodes and see how do they compare then.
 
+#### Medicare Payments by State
+![png](images/top_medicare_payment.png)
