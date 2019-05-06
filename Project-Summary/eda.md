@@ -541,6 +541,29 @@ We would expect the relationship to be linear since you would want to see more p
 If you look at the scales the number of females patients are almost double the number of males in every state. It will be interesting to group them actual episodes and see how do they compare then.
 
 #### Geoplots
+```python
+import geopandas as gpd
+from shapely.geometry import Point, Polygon
+
+usa = gpd.read_file('data/states_21basic/states.shp')
+medicare_data_train_merged = usa.set_index('STATE_ABBR').join(medicare_data_train.set_index('state'))
+```
+```python
+def plot_maps(dataFrame,mapDframe, quantile, columns):
+    nrows = len(columns)
+    fig, axArray = plt.subplots( nrows= nrows, ncols= 1, figsize=(30, 30))    
+    for col, ax in zip(columns,axArray):
+        quantile_value = dataFrame[[col]].quantile(quantile).values[0]
+        base = mapDframe.plot(color='white', edgecolor='green', ax = ax)
+        dataFrame[dataFrame[col] > quantile_value].plot(ax=base, column=col, legend = True)
+        ax.set_title(col + ' Greater ' + str(quantile*100) +' percentile value of ' + str(quantile_value))
+        ax.set_axis_off()
+```
+```python
+columns = ['medicare_payment', 'total_episodes', 'total_visits_episode', 'total_charge', 'alzheimer','asthma']
+plot_maps(dataFrame = medicare_data_train_merged,mapDframe = usa, quantile = 0.95, columns = columns)
+```
+
 ![png](images/geoplots.png)
 
 #### Correlation Plots
