@@ -411,6 +411,28 @@ We will rename the columns for easier manipulation
   </tbody>
 </table>
 
+#### Train Test Split
+
+We split the data into train/test split with 80% of the data randomly assigned to the train dataset and 20% of the data being assigned to the testing set. The training set will be used to train the model and once the model is optimized, we will use the test data to test the performance of the model
+
+```python
+from sklearn.model_selection import train_test_split
+medicare_data_train, medicare_data_test, = train_test_split( medicare_data, test_size=0.20, random_state=42)
+```
+```python
+medicare_data_train.shape
+```
+```python
+(8111, 49)
+```
+The training set consists of 8111 samples
+```python
+medicare_data_test.shape
+```
+```python
+(2028, 49)
+```
+The test set consists of 2028 samples
 
 #### Missing Data 
 
