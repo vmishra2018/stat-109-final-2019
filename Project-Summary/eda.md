@@ -550,7 +550,24 @@ The plots below shows the correlation of each variable against each of the varia
 
 
 The strongest correlations exits between the following pairs of columns:
-
+```python
+def filterCorrelation(corr, corr_thres = 0.5):
+    corr_filtered = corr.where(~np.tril(np.ones(corr.shape)).astype(np.bool))
+    corr_filtered = corr_filtered.stack()
+    corr_filtered.name = 'Corr Coefficient'
+    corr_filtered.index.names = ['feat1', 'feat2']
+    corr_filtered = corr_filtered[corr_filtered > corr_thres].to_frame()
+    corr_filtered = corr_filtered.stack().reset_index()
+    corr_filtered = corr_filtered.drop('level_2', axis=1)
+    corr_filtered.columns = ['feat_1', 'feat_2', 'corr']
+    corr_filtered = corr_filtered.sort_values(by=['corr', 'feat_1', 'feat_2'], ascending=False)
+    return corr_filtered
+```
+```python
+#View Correlated of  Columns over 0.6
+filtered_corr = filterCorrelation(corr, corr_thres = 0.6)
+filtered_corr.head()
+```
 <table class="dataframe">
   <thead>
     <tr style="text-align: right;">    
