@@ -25,6 +25,7 @@
   * [Expected Amount Vs Total Episodes](#expected-amount-vs-total-episodes) <BR>
   * [Number of Males and Females by State](#number-of-males-and-females-by-state) <BR>
   * [Geoplots](#geoplots) <BR>
+  * [Correlation Plots](#correlation-plots) <BR>
 - [Key Features](#key-features)
 
 <HR>
@@ -539,3 +540,8 @@ If you look at the scales the number of females patients are almost double the n
 
 #### Geoplots
 ![png](images/geoplots.png)
+
+#### Correlation Plots
+The the plots shows the correlation of each variable against each of the variables in the training set
+
+![png](images/correlation.png)
