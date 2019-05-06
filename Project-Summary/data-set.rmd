@@ -1,6 +1,25 @@
+## STAT-109 Intro to Statistical Modeling - Final Project
+
+#### Contributors : [Phillip Booth](mailto:phillip.booth2015@gmail.com), [Eliud Omollo](woordy2000@gmail.com) , [Jack Carter](jcarter2014@gmail.com), [Vivek Mishra](mailto:iblpvivek@icloud.com)
+
+<HR>
+
+### [Welcome](readme.md)&emsp;|&emsp;[**_Data Set_**](data-set.md)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](summary.md)
+
+<HR>
+
 ## Data Set
 
+### Content:
+
+1. [Source](#source)
+2. [Introduction](#introduction)
+3. [Relevant Columns](#relevant-columns)
+
+
+
 ### Source
+
 Medicare Home Health Agency (HHA) Provider Aggregate Report, CY 2016
 https://data.cms.gov/Medicare-Home-Health-Agency-HHA-/Medicare-Home-Health-Agency-HHA-Provider-Aggregate/fdg8-v2i5
 

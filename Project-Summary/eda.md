@@ -4,7 +4,7 @@
 
 <HR>
 
-### [Welcome](README.md)&emsp;|&emsp;[Data Set](data-set.rmd)&emsp;|&emsp;[**_Introduction and EDA_**](intro-and-eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](mailto:iblpvivek@icloud.com)
+### [Welcome](readme.md)&emsp;|&emsp;[Data Set](data-set.md)&emsp;|&emsp;[**_Introduction and EDA_**](eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](summary.md)
 
 <HR>
 

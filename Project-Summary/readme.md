@@ -2,7 +2,7 @@
 #### Contributors : [Phillip Booth](mailto:phillip.booth2015@gmail.com), [Eliud Omollo](woordy2000@gmail.com) , [Jack Carter](jcarter2014@gmail.com), [Vivek Mishra](mailto:iblpvivek@icloud.com)
 <HR>
 
-### [**_Welcome_**](README.md)&emsp;|&emsp;[Data Set](data-set.rmd)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[Model Building](model-building.rmd)&emsp;|&emsp;[Summary](summary.md)
+### [**_Welcome_**](readme.md)&emsp;|&emsp;[Data Set](data-set.md)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](summary.md)
 <HR>
 
 ### Content:
