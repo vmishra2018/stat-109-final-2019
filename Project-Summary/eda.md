@@ -26,6 +26,8 @@
   * [Number of Males and Females by State](#number-of-males-and-females-by-state) <BR>
   * [Geoplots](#geoplots) <BR>
   * [Correlation Plots](#correlation-plots) <BR>
+  * [Scatter Plots](#ccatter-plots) <BR>
+ 
 - [Key Features](#key-features)
 
 <HR>
@@ -549,13 +551,50 @@ The plots below shows the correlation of each variable against each of the varia
 #### Scatter Plots
 The Scatter plots below shows the correlation of each variable against each of the variables in the training set
 
+Plot 1:
+
 ![png](images/scatter_06_10.png)
+
+Plot 2:
+
 ![png](images/scatter_10_15.png)
+
+Plot 3:
+
 ![png](images/scatter_15_20.png)
+
+Plot 4:
+<ul>
+ <li>Correlation between Lupa payment and num_male</li>
+ <li>Correlation between Lupa payment and num_female</li>
+ <li>Correlation between Lupa payment and non_dual</li>
+ <li>Correlation between  num_male and num_female</li>
+ <li>num_male and num_dual</li>
+ <li>num_female and num_dual</li>
+ <li>non_dual and num_female</li>
+ <li>non_dual and num_male</li>
+
+ </ul>
+
 ![png](images/scatter_20_25.png)
+
+Plot 5: No correlation exits between the variables 
+
 ![png](images/scatter_25_30.png)
+
+Plot 6: No correlation exits between the variables 
+
 ![png](images/scatter_30_35.png)
+
+Plot 7: Some correlation exits betwen COPD and ASTHMA
+
 ![png](images/scatter_35_40.png)
+
+Plot 8: No correlation exits between the variables 
+
 ![png](images/scatter_40_45.png)
+
+Plot 9: No correlation exits between the variables 
+
 ![png](images/scatter_45.png)
 
