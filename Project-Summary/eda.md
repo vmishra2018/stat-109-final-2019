@@ -553,13 +553,26 @@ The Scatter plots below shows the correlation of each variable against each of t
 
 Plot 1:
 
+<ul>
+ <li>total_episodes and distinct_benefeciaries</li>
+ <li>sn_episodes and total_visits_episodes</li>
+ </ul>
+
 ![png](images/scatter_06_10.png)
 
-Plot 2:
+Plot 2: No correlation exits between the variables 
 
 ![png](images/scatter_10_15.png)
 
 Plot 3:
+
+<ul>
+ <li>total_charge and medicare_payment</li>
+ <li>total_charge and expected_payment</li>
+ <li>lupa_episodes and expected_payment</li>
+ <li>lupa_episodes and medicare_payment</li>
+ <li>lupa_episodes and total_charge</li>
+</ul>
 
 ![png](images/scatter_15_20.png)
 
@@ -573,7 +586,6 @@ Plot 4:
  <li>num_female and num_dual</li>
  <li>non_dual and num_female</li>
  <li>non_dual and num_male</li>
-
  </ul>
 
 ![png](images/scatter_20_25.png)
