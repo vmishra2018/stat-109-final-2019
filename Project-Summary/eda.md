@@ -542,6 +542,7 @@ If you look at the scales the number of females patients are almost double the n
 ![png](images/geoplots.png)
 
 #### Correlation Plots
-The the plots shows the correlation of each variable against each of the variables in the training set
+The plots below shows the correlation of each variable against each of the variables in the training set
 
 ![png](images/correlation.png)
+
