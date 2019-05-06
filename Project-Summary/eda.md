@@ -14,6 +14,7 @@
 - [Data Resources](#data-resources)
 - [EDA](#eda) 
   * [Sample Data](#sample-data) <BR>
+  * [Rename Columns](#rename-columns) <BR>
   * [Missing Data](#missing-data) <BR>
     [Impute Missing Values](#impute-the-missing-values)<BR>
   * [Number of Agencies By State](#number-of-agencies-by-state) <BR>
