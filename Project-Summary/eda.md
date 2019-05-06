@@ -548,11 +548,52 @@ The plots below shows the correlation of each variable against each of the varia
 
 ![png](images/correlation.png)
 
+
+The strongest correlations exits between the following pairs of columns:
+
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">    
+      <th>feat_1</th>
+      <th>feat_2</th>
+      <th>corr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>      
+      <td>total_episodes</td>
+      <td>expected_payment</td>  
+      <td>0.991620</td>  
+    </tr> 
+   <tr>      
+      <td>num_male</td>
+      <td>num_female</td>  
+      <td>0.990460</td>  
+    </tr> 
+   <tr>      
+      <td>medicare_payment</td>
+      <td>expected_payment</td>  
+      <td>0.985884</td>  
+    </tr> 
+   <tr>      
+      <td>distinct_beneficiaries</td>
+      <td>num_female</td>  
+      <td>0.984576</td>  
+    </tr> 
+   <tr>      
+      <td>distinct_beneficiaries</td>
+      <td>num_male</td>  
+      <td>0.982362</td>  
+    </tr> 
+  </tbody>
+</table>
+
+
 #### Scatter Plots
 The Scatter plots below shows the correlation of each variable against each of the variables in the training set
 
 Plot 1:
-
+We observe the following correlation:
 <ul>
  <li>total_episodes and distinct_benefeciaries</li>
  <li>sn_episodes and total_visits_episodes</li>
@@ -566,6 +607,7 @@ Plot 2: No correlation exits between the variables
 
 Plot 3:
 
+We observe the following correlation:
 <ul>
  <li>total_charge and medicare_payment</li>
  <li>total_charge and expected_payment</li>
@@ -577,6 +619,8 @@ Plot 3:
 ![png](images/scatter_15_20.png)
 
 Plot 4:
+
+We observe the following correlation:
 <ul>
  <li>Correlation between Lupa payment and num_male</li>
  <li>Correlation between Lupa payment and num_female</li>
