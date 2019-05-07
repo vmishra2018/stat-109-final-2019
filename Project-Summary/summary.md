@@ -7,8 +7,6 @@
 <HR>
 
 
-<HR>
-
 ### Summary
 
 In this project, we examined variables that influence the expected medicare payments for home health agencies. We examined and analyzed the following:
