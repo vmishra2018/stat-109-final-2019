@@ -97,37 +97,38 @@ medicare_data = train_data[!unused_columns]
 
 To start we removed any columns that were not directly relevant to our regression analysis.
 
-***Provider_id
-Agency
-Address
-City
-State
-Zip Code***
+- Provider_id
+- Agency
+- Address
+- City
+- State
+- Zip Code
+  
 
 These columns were removed because they are just identifiers for the Home Health Agencies in the dataset.
 
-***Medicare_payment
-Outlier_Payment
-Total_Charge***
+- Medicare_payment
+- Outlier_Payment
+- Total_Charge
 
-The next three columns are removed because they are too closely correlated to our dependent variable expected_payment and would be useless in the regression. Our dependent variable is expected_payment which is just a fractional percentage of Medicare_payment, Outlier_payment, and Total_charge.
+Our dependent variable is expected_payment which is just a fractional percentage of Medicare_payment, Outlier_payment, and Total_charge.
 
-***Lupa_episodes
-Lupa payment***
+- Lupa_episodes
+- Lupa payment
 
 The next two columns were removed because they are not relevant for our dependent variable expected_payment. Our dependent variable expected_payment is referring to the total amount that Medicare paid out for non-LUPA claims.
 
-***Age
-Num_Male
-Num_female
-Lupa_episodes
-White
-Black
-Asian
-Alaskan
-Hispanic***
+- Age
+- Num_Male
+- Num_female
+- Lupa_episodes
+- White
+- Black
+- Asian
+- Alaskan
+- Hispanic
 
-Any columns that were related to population identifiers were removed because they are not values used to calculate the Medicare reimbursement amount for a particular medical episode.
+Any columns that were related to population identifiers were removed because they are not values used to calculate the Medicare reimbursement amount for a particular medical episode. They are used solely for reporting purposes.
 
 ```
 names(medicare_data)
