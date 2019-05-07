@@ -534,6 +534,8 @@ We would expect the relationship to be linear since you would want to see more p
 
 #### Number of Males and Females by State
 
+
+
 ![png](images/number-of-males-by-state.png)
 
 ![png](images/number-of-females-by-state.png)
@@ -640,8 +642,30 @@ filtered_corr.head()
 
 #### Plot variables that have correlation greater than 0.5 with the output
 
-![png](images/expected_payment_feat_01.png)
+```python
+
+feat_1_ex = filtered_corr[filtered_corr['feat_2']=='expected_payment']['feat_1'].values.tolist()
+feat_2_ex = filtered_corr[filtered_corr['feat_2']=='expected_payment']['feat_2'].values.tolist()
+fig, axArray = plt.subplots(ncols=1, nrows = 4, figsize = (10, 10))
+for feat1, feat2, ax in zip(feat_1_ex , feat_2_ex, axArray):
+    medicare_data_train.plot.scatter(feat1, feat2, ax =ax, title = feat2 + ' vs ' + feat1)
+    ax.set_ylabel(feat2)
+plt.tight_layout()
+```
 ![png](images/expected_payment_feat_02.png)
+
+
+```python
+feat_1_ex_2 = filtered_corr[filtered_corr['feat_1']=='expected_payment']['feat_1'].values.tolist()
+feat_2_ex_2 = filtered_corr[filtered_corr['feat_1']=='expected_payment']['feat_2'].values.tolist()
+fig, axArray = plt.subplots(ncols=1, nrows = 9, figsize = (10, 30))
+for feat1, feat2, ax in zip(feat_1_ex_2 , feat_2_ex_2, axArray):
+    medicare_data_train.plot.scatter(feat2, feat1, ax =ax, title = feat1 + ' vs ' + feat2)
+    ax.set_ylabel(feat1)
+plt.tight_layout()
+```
+![png](images/expected_payment_feat_01.png)
+
 
 #### Scatter Plots
 The Scatter plots below shows the correlation of each variable against each of the variables in the training set
