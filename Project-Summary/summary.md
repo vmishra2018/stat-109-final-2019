@@ -15,12 +15,12 @@
 ### Summary
 
 In this project, we examined variables that influence the expected medicare payments for home health agencies. We examined and analyzed the following:
-<ul>
-  <li>Variables that were captured but not necessary for the prediction</li>
-  <li>Normality of the data</li>
-  <li>Constant Variance</li>
-  <li>Constant Variance</li>
-<ul>
+  <ul>
+    <li>Variables that were captured but not necessary for the prediction</li>
+    <li>Normality of the data</li>
+    <li>Constant Variance</li>
+    <li>Constant Variance</li>
+  <ul>
 
 [Back to top](#content)
 
