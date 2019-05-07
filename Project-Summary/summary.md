@@ -23,7 +23,8 @@ In this project, we examined variables that influence the expected medicare paym
     <li>We performed Exploratory Data Analysis on the data to get an understanding of the relationship between variables.</li>   
   </ul>
 <HR>
-  ### Regression Steps
+ 
+ ### Regression Steps
   
 2. [Regression Steps](#regression-steps)
 
@@ -39,7 +40,8 @@ In this project, we examined variables that influence the expected medicare paym
   <li>Step 9: All four LINE assumptions have been addressed and improved</li>   
   </ul>
 <HR>
-  ### Challenges
+ 
+ ### Challenges
 3. [Challenges](#challenges)
   <ul> 
     <li>Computational Resources: One of the major challenges that we faced in our data analysis was the available processing power of our machines as well as on the RStudio cloud servers. Because of the size of our dataset we were really limited in what we could do with certain R functions</li> 
@@ -48,7 +50,8 @@ In this project, we examined variables that influence the expected medicare paym
    <li>Zeros: Another challenge that we faced was certain columns contained zero values</li>
   </ul>
 <HR>
-   ### Conclusion
+  
+  ### Conclusion
 4. [Conclusion](#conclusion)
   <ul> 
     <li>Test Results: R_squared = 0.9981</li> 
