@@ -15,11 +15,13 @@
 ### Summary
 
 In this project, we examined variables that influence the expected medicare payments for home health agencies. We examined and analyzed the following:
+
   <ul>
     <li>Variables that were captured but not necessary for the prediction:
-     After researching the underlying the data through the Medicare site, we determined that some variables such as age, sex, race were     collected for government reporting purposes did not go towards the expected payment. We recognized that a good understanding of the     data is important before one undertakes a regression task.
+     After researching the underlying the data through the Medicare site, we determined that some variables such as age, sex, race were         collected for government reporting purposes did not go towards the expected payment. We recognized that a good understanding of the       data is important before one undertakes a regression task.
   </li>
-   
+  <ul>
+    <li>We performed Exploratory Data Analysis on the data to get an understanding of the data</li>   
   </ul>
 
 [Back to top](#content)
