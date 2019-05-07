@@ -599,7 +599,7 @@ def filterCorrelation(corr, corr_thres = 0.5):
     return corr_filtered
 ```
 ```python
-#View Correlated of  Columns over 0.9
+#View Correlated of  Columns over 0.5
 filtered_corr = filterCorrelation(corr, corr_thres = 0.5)
 filtered_corr
 ```
