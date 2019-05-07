@@ -6,10 +6,6 @@
 ### [**_Welcome_**](readme.md)&emsp;|&emsp;[Data Set](data-set.md)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](summary.md)
 <HR>
 
-### Content:
-1. [Summary](#summary)
-
-
 
 <HR>
 
@@ -27,7 +23,6 @@ In this project, we examined variables that influence the expected medicare paym
  
  ### Regression Steps
   
-2. [Regression Steps](#regression-steps)
 
  <ul>  
     <li>Step 1: Fit the model</li>
@@ -43,7 +38,7 @@ In this project, we examined variables that influence the expected medicare paym
 <HR>
  
  ### Challenges
-3. [Challenges](#challenges)
+ 
   <ul> 
     <li>A good understanding of the domain data was important for this project</li>
     <li>Computational Resources: One of the major challenges that we faced in our data analysis was the available processing power of our machines as well as on the RStudio cloud servers. Because of the size of our dataset we were really limited in what we could do with certain R functions</li> 
@@ -54,7 +49,7 @@ In this project, we examined variables that influence the expected medicare paym
 <HR>
   
   ### Conclusion
-4. [Conclusion](#conclusion)
+
   <ul> 
     <li>Test Results: R_squared = 0.9981</li> 
     <li>Next Steps: Improving the issues on residual plots</li>
