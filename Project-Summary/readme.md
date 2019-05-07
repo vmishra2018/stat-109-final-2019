@@ -7,7 +7,9 @@
 
 ### Content:
 1. [Motivation](#motivation)
-2. [Problem Statement](#problem-statement)
+2. [Thesis](#thesis)
+3. [Use Cases](#use-cases)
+4. [Problem Statement](#problem-statement)
 
 <HR>
 
