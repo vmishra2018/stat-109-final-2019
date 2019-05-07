@@ -19,11 +19,10 @@ In this project, we examined variables that influence the expected medicare paym
     <li>Variables that were captured but not necessary for the prediction</li>
   After researching the underlying the data through the Medicare site, we determined that some variables such as age, sex, race were collected for government reporting purposes did not go towards the expected payment. We recognized that a good understanding of the data is important before one undertakes a regression task.
     <li>Normality of the data</li>
- 
   
     <li>Constant Variance</li>
     
-  <ul>
+  </ul>
 
 [Back to top](#content)
 
