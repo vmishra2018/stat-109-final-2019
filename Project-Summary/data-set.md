@@ -80,4 +80,3 @@ Our data does not contain information at the patient level, but instead provides
 | Percent   of Beneficiaries with RA/OA                        | Percent   of beneficiaries meeting the CCW chronic condition algorithm for rheumatoid   arthritis/osteoarthritis. |
 | Percent   of Beneficiaries with Schizophrenia                | Percent   of beneficiaries meeting the CCW chronic condition algorithm for   schizophrenia and other psychotic disorders. |
 | Percent   of Beneficiaries with Stroke                       | Percent   of beneficiaries meeting the CCW chronic condition algorithm for stroke. |
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
