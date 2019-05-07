@@ -6,6 +6,15 @@
 ### [**_Welcome_**](readme.md)&emsp;|&emsp;[Data Set](data-set.md)&emsp;|&emsp;[Introduction and EDA](eda.md)&emsp;|&emsp;[Model Building](model-building.md)&emsp;|&emsp;[Summary](summary.md)
 <HR>
 
+## Content:
+- [Summary](#summary)
+
+- [Regression Steps](#regression-steps)
+
+- [Challenges](#challenges)
+
+- [Conclusion](#conclusion)
+
 
 ### Summary
 
