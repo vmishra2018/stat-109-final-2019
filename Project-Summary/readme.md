@@ -32,15 +32,15 @@ We chose a data set from Data.CMS.gov, a federal government website managed by t
 
 It is possible to use the Business level data provided in the Medicare Home Health Agency (HHA) Provider Aggregate Report, CY 2016 to create an accurate model for representing the Total amount that Medicare pays Home Health Agencies for non-LUPA episodes adjusted for geographic differences in payment rates.
 
-The dataset provides aggregated information about the customer bodies that these Home Health Agencies service, as well as information about the agencies underlying servicing practices, and with this info we should be able to explore a link between these variables and the amount that these businesses are paid by the Medicare system.
+The dataset provides aggregated information about the customer bodies that these Home Health Agencies service, as well as information about the agencies underlying servicing practices, and with this info we should be able to explore a link between these variables and the amount that these businesses are paid by the Medicare system for non-LUPA medical episodes.
 
 <HR>
 
 ### Use Cases
 
-Home Health Agencies: Assessing business performance by using the aggregated characteristics of your servicing practices to determine if your business’s performance is within industry standards.
+**Home Health Agencies**: Assessing business performance by using the aggregated characteristics of your servicing practices to determine if your business’s performance is within industry standards.
 
-U.S. Government: Auditing Home Health Agencies to accurately determine when fraudulent claim activity is occurring.
+**U.S. Government**: Auditing Home Health Agencies to accurately determine when fraudulent claim activity is occurring.
 
 <HR>
 
