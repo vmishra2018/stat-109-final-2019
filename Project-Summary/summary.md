@@ -25,8 +25,6 @@ In this project, we examined variables that influence the expected medicare paym
 
 2. [Regression Steps](#regression-steps)
 
-####  Step1:
-
  <ul>  
     <li>Step 1: Fit the model</li>
     <li>Step 2: Observe diagnostics of model to see if LINE is satisfied</li> 
