@@ -16,6 +16,7 @@
 
 
 ## Content:
+- [Response Variable](#response-variable)
 - [Load Train and Test Data](#load-train-and-test-data)
 
 - [Initial fit and diagnostics](#initial-fit-and-diagnostics)
@@ -28,7 +29,11 @@
 
 - [References](#references)
 
-  
+  <HR>
+
+#### Response Variable:
+
+The response variable that contains the value we will be predicting is <b>expected_payment</b>
 
 <HR>
 
