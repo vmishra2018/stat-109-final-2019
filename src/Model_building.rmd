@@ -1,0 +1,205 @@
+---
+title: "Untitled"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+library(car)
+library(nortest)
+library(R330)
+library(MASS)
+
+
+```
+
+```{r cars}
+# Step 1: Grab the data
+train_data = read.csv('medicare_data_train.csv')
+
+test_data = read.csv('medicare_data_test.csv')
+
+
+# Step 2: Identify and pull out columns that shouldn't be used in the regression
+unused_columns = names(train_data) %in% c('provider_id', 'agency', 
+                                'address', 'city', 'state', 'zip_code','num_female',
+                                       'medicare_payment',
+                                       'num_male','lupa_episodes','white',
+                                       'total_charge','medical_payment','outlier_payment','lupa_payment',
+                                       'age','non_dual', 'dual', 'white','black','asian','alaskan','hispanic', 'unknown_race','total_visits_episode')
+unused_columns
+
+```
+
+```{r}
+medicare_data = train_data[!unused_columns]
+names(medicare_data)
+```
+
+
+
+```{r}
+# Step 3: Make initial fit and check diagnostics
+fit = lm(expected_payment~., data = medicare_data)
+
+
+# Step 3a: Check vif to see if we can remove variables with high multicollinearity
+vif(fit)
+```
+
+```{r}
+
+
+# We have several high vif's. To fix this, we remove the variable with the highest vif, refit the model, and 
+# repeat until all the x variables have low vif's. This will fix multicollinearity.
+
+
+#high_vif = names(medicare_data) %in% c(
+#                                      'distinct_beneficiaries','num_female',
+#                                       'medicare_payment',
+#                                       'num_male','lupa_episodes','white',
+#                                       'total_charge','medical_payment','outlier_payment','lupa_payment',
+#                                       'age','non_dual', 'dual', 'white','black','asian','alaskan','hispanic', 'unknown_race'
+#                                       )
+#low_vif = medicare_data[!high_vif]
+
+low_vif = medicare_data;
+names(low_vif)
+```
+
+
+
+```{r}
+
+# Step 5: Re-fit model with low vif variables and check diagnostics
+low_vif_fit = lm(expected_payment ~ ., data = low_vif)
+vif(low_vif_fit)
+# We have fixed multicollinearity
+summary(low_vif_fit)
+```
+
+```{r}
+# Now we want to check for normality and equal variance of error terms
+plot(low_vif_fit)
+```
+
+
+```{r}
+
+# The residuals vs fitted plot suggests we fit a line when we should have fit a curve
+# The qqplot shows some non-normality at the tails, mention point 7071 and 7557
+# Point 7557 appears to be an influential point
+# Let's perform some tests to check for constant variance
+ncvTest(fit)
+# The null hypothesis of the ncvTest is that we have constant variance
+# p-value of ncv test suggests we have non-constant variance
+# We can also check for normality of the error term distribution
+ad.test(fit$residuals)
+# Anderson-Darling test has a low p-value, which suggests our error terms are not normally distributed
+
+```
+
+```{r}
+# Step 6: Still way too many x variables. Remove highest p-value and refit until all p-values are significant
+high_p_value = names(low_vif) %in% c('schizophrenia','hypertension','kidney_disease','msw_episode','copd','chf','osteoporosis','asthma','ra_oa','stroke','hyperlipidemia','diabetes','cancer','alzheimer')
+
+low_p_value = low_vif[!high_p_value]
+low_p_value_fit = lm(expected_payment ~ ., data = low_p_value)
+summary(low_p_value_fit)
+
+vif(low_p_value_fit)
+ncvTest(low_p_value_fit)
+ad.test(low_p_value_fit$residuals)
+```
+
+```{r}
+all_fit = allpossregs(low_p_value_fit, best=3)
+all_fit
+```
+
+```{r}
+# Step 7: Create a regression using allpossregs with a max of five x variables
+
+
+# Select the model with 5 variables that has the lowest AIC/BIC
+low_aic_bic_fit = lm(expected_payment ~ total_episodes + sn_episode + pt_episode + ot_episode + st_episode + hcc_score, data = low_p_value)
+summary(low_aic_bic_fit)
+plot(low_aic_bic_fit)
+ncvTest(low_aic_bic_fit)
+ad.test(low_aic_bic_fit$residuals)
+```
+
+```{r}
+# Perform a power transform to see if we can change the data to make normal errors with equal variance
+first_power_transform = powerTransform(family="bcnPower", with(low_p_value, 
+                                               cbind(
+                                                 total_episodes , sn_episode ,pt_episode ,ot_episode , st_episode ,hcc_score
+                                               )))
+summary(first_power_transform)
+
+
+```
+```{r}
+power_transform_fit = lm(expected_payment ~ I(total_episodes^(0.017)) + I(sn_episode^(.1)) + I(pt_episode^(0.649)) + I(ot_episode^(0.2489))+ I(st_episode^(0.1)) + I(hcc_score^(0.1))
+                         , data = medicare_data)
+summary(power_transform_fit)
+plot(power_transform_fit)
+```
+
+```{r}
+ncvTest(power_transform_fit)
+```
+
+```{r}
+# Log the y variable to fix non constant variance
+power_transform_fit_log = lm(log(expected_payment) ~ I(total_episodes^(0.017)) + I(sn_episode^(.1)) + I(pt_episode^(0.649)) + I(ot_episode^(0.2489))+ I(st_episode^(0.1)) + I(hcc_score^(0.1))
+                         , data = medicare_data)
+summary(power_transform_fit_log)
+plot(power_transform_fit_log)
+# Residuals vs fitted plot shows we fit a line when we should have fit a curve. We can add polynomial terms to try 
+# to fix this
+```
+
+
+
+```{r}
+power_transform_fit_log_poly_1 =
+lm(log(expected_payment) ~ I(total_episodes^(0.017)) + poly(total_episodes, 2) +poly(sn_episode,2)+ poly(pt_episode,2) + I(sn_episode^(.1)) + I(pt_episode^(0.649)) + I(ot_episode^(0.2489))+ I(st_episode^(0.1)) + I(hcc_score^(0.1))
+                         , data = medicare_data)
+summary(power_transform_fit_log_poly_1)
+plot(power_transform_fit_log_poly_1)
+
+```
+```{r}
+ncvTest(power_transform_fit_log_poly_1)
+```
+
+
+
+```{r}
+#predict(power_transform_fit_log_poly_3, test_data, interval = 'prediction')
+test_predictions = predict(object = power_transform_fit_log_poly_1, newdata= test_data, interval = 'prediction')
+r_squared <- function(vals, preds) {   1 - (sum((vals - preds)^2) / sum((vals - mean(preds))^2)) }
+r_squared(vals = log(test_data$expected_payment), preds = test_predictions[,1])
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
