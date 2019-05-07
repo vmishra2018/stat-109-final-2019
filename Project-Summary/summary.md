@@ -45,7 +45,7 @@ In this project, we examined variables that influence the expected medicare paym
    <li>Zeros: Another challenge that we faced was certain columns contained zero values</li>
   </ul>
 
-3. [Conclusion](#conclusion)
+4. [Conclusion](#conclusion)
   <ul> 
     <li>Test Results: R_squared = 0.9981</li> 
     <li>Next Steps: Improving the issues on residual plots</li>
