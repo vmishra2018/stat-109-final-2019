@@ -10,6 +10,7 @@
 1. [Summary](#summary)
 
 
+
 <HR>
 
 ### Summary
@@ -44,6 +45,7 @@ In this project, we examined variables that influence the expected medicare paym
  ### Challenges
 3. [Challenges](#challenges)
   <ul> 
+    <li>A good understanding of the domain data was important for this project</li>
     <li>Computational Resources: One of the major challenges that we faced in our data analysis was the available processing power of our machines as well as on the RStudio cloud servers. Because of the size of our dataset we were really limited in what we could do with certain R functions</li> 
   <li>PowerTransformation (continuously clocked out)</li>
   <li>All possible regressions (needed to be limited to 5 variables)</li>
