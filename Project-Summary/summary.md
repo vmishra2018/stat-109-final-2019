@@ -37,5 +37,12 @@ In this project, we examined variables that influence the expected medicare paym
   <li>Step 9: All four LINE assumptions have been addressed and improved</li>   
   </ul>
 
+3. [Challenges](#challenges)
+  <ul> 
+    <li>Computational Resources: One of the major challenges that we faced in our data analysis was the available processing power of our machines as well as on the RStudio cloud servers. Because of the size of our dataset we were really limited in what we could do with certain R functions</li> 
+  <li>PowerTransformation (continuously clocked out)</li>
+  <li>All possible regressions (needed to be limited to 5 variables)</li>
+   <li>Zeros: Another challenge that we faced was certain columns contained zero values</li>
+  </ul>
 
 [Back to top](#content)
