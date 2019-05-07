@@ -23,10 +23,20 @@ In this project, we examined variables that influence the expected medicare paym
     <li>We performed Exploratory Data Analysis on the data to get an understanding of the relationship between variables.</li>   
   </ul>
 
-[Back to top](#content)
+2. [Regression Steps](#regression-steps)
 
-<HR>
+####  Step1:
 
-Stuff here
+ <ul>  
+    <li>Step 1: Fit the model</li>
+    <li>Step 2: Observe diagnostics of model to see if LINE is satisfied</li> 
+    <li>Step 3: Notice that we have multicollinearity. Remove variable with highest VIF, refit, and repeat until we don’t have any more multicollinearity.</li>
+  <li>Step 4: Notice that we have some insignificant variables in the model. Remove variable with highest p-value, refit, and repeat until all variables are significant.</li>
+  <li>Step 5: Notice that we don’t have normally distributed error terms. Use allpossregs to produce a model with five variables based on the lowest AIC/BIC, and run a power transform on those variables to create a model with normally distributed error terms.</li>
+  <li>Step 6: Notice that we fit a line when we should have fit a curve based on the residuals vs fitted plot. Introduce polynomial terms to fix this.</li>
+  <li>Step 7: Notice that we don’t have equal variance of our error terms. Fit a model with a logged y variable and see that equal variance has been fixed.</li>
+  <li>Step 8: All four LINE assumptions have been addressed and fixed</li>   
+  </ul>
+
 
 [Back to top](#content)
