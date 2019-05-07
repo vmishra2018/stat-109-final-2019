@@ -638,6 +638,10 @@ filtered_corr.head()
   </tbody>
 </table>
 
+#### Plot variables that have correlation greater than 0.5 with the output
+
+![png](images/expected_payment_feat_01.png)
+![png](images/expected_payment_feat_02.png)
 
 #### Scatter Plots
 The Scatter plots below shows the correlation of each variable against each of the variables in the training set
