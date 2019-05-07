@@ -698,7 +698,4 @@ r_squared(vals = log(test_data$expected_payment), preds = test_predictions[,1])
 ## [1] 0.9981883
 ```
 
-R sqaured value is almost .99 which is really good and pretty much matches with our train data r squared value.
-
-### References
-
+R squared value is almost .99 which is really good and pretty much matches with our train data r squared value.
